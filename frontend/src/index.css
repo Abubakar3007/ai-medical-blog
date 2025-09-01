@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  /* font-family: 'DM Sans', Arial, sans-serif; */
+  font-family: "Merienda", cursive;
+  background: white;
+  color: #233044;
+  /* Example text color from your palette */
+}
+
+.logo {
+  /* font-family: 'DM Sans', Arial, sans-serif; */
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  font-family: "Saira", sans-serif;
+  font-weight: 700;
+  /* Bold for headings */
+  color: #222222;
+  /* Example heading color */
+}
+
+body,
+p,
+span,
+a,
+li {
+ font-family: "Saira", sans-serif;
+  font-weight: 400;
+  /* Use Inter or your preferred body font */
+  color: #222222;
+}
+
+
+svg {
+  font-size: 19px !important;
+}
+
+.calc-pb {
+  padding-bottom: 24px;
+}
+
+.after-line::after {
+  height: calc(100% - 30px);
+}
+
+.no-scroll {
+  scrollbar-width: none;
+}
+
+.no-scroll::-webkit-scrollbar {
+  display: none;
+}
