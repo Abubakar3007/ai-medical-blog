@@ -26,13 +26,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const path = require("path");
 
 // Serve frontend build
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
+    res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
 });
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads"))); // Serve static images
@@ -497,16 +496,16 @@ app.get('/profile/:id', async (req, res) => {
 
 // Update user bio
 app.patch('/profile/:id', async (req, res) => {
-  try {
-    const updatedUser = await User.findByIdAndUpdate(
-      req.params.id,
-      { $set: req.body },
-      { new: true }
-    );
-    res.status(200).json(updatedUser);
-  } catch (err) {
-    res.status(500).json({ message: "Error updating profile", error: err });
-  }
+    try {
+        const updatedUser = await User.findByIdAndUpdate(
+            req.params.id,
+            { $set: req.body },
+            { new: true }
+        );
+        res.status(200).json(updatedUser);
+    } catch (err) {
+        res.status(500).json({ message: "Error updating profile", error: err });
+    }
 });
 
 
